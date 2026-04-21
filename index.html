@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kelvin Watiki — Software Developer & AI Enthusiast. Portfolio showcasing projects in AI/ML, Cloud Computing, and Full-Stack Development." />
+  <title>Kelvin Watiki · Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">KW<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name reveal">
+        Kelvin<br />
+        <span class="name-accent">Watiki</span>
+      </h1>
+
+      <p class="hero-title reveal">
+        <span class="typed-wrapper">
+          Software Developer<span class="typed-sep"> · </span>AI Enthusiast
+        </span>
+      </p>
+
+      <p class="hero-tagline reveal">
+        Building intelligent systems at the intersection of<br class="br-desktop" />
+        code, data, and cloud infrastructure.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">
+          <i class="ph ph-folder-open"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="ph ph-paper-plane-tilt"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-scroll-hint reveal">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Floating code snippets decoration -->
+    <div class="hero-deco" aria-hidden="true">
+      <div class="deco-card deco-card-1">
+        <span class="deco-comment"># flight price prediction</span><br />
+        <span class="deco-kw">model</span> = RandomForest()<br />
+        <span class="deco-kw">accuracy</span> = <span class="deco-num">94.2</span>%
+      </div>
+      <div class="deco-card deco-card-2">
+        <span class="deco-kw">def</span> recognize_swahili(<br />
+        &nbsp;&nbsp;audio_input<br />
+        ):<br />
+        &nbsp;&nbsp;<span class="deco-kw">return</span> ai_model(audio)
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal">01 / About</div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-heading">Turning ideas into<br /><span class="accent">intelligent systems.</span></h2>
+          <p>
+            I'm a Computer Science student with a deep passion for building software that solves real-world problems. My work spans full-stack web development, machine learning, and cloud-native applications.
+          </p>
+          <p>
+            With a foundation in Python and PHP, I craft everything from predictive AI models to voice assistants that understand Kiswahili — reflecting my belief that technology should be inclusive and locally relevant.
+          </p>
+          <p>
+            I thrive in fast-moving environments and enjoy the challenge of turning complex problems into clean, maintainable solutions.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">3+</span>
+              <span class="highlight-label">Projects Shipped</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">3</span>
+              <span class="highlight-label">Languages</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">AI/ML</span>
+              <span class="highlight-label">Focus Area</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-aside reveal">
+          <div class="about-card">
+            <div class="about-card-header">
+              <i class="ph ph-terminal"></i>
+              <span>Quick Profile</span>
+            </div>
+            <ul class="profile-list">
+              <li>
+                <span class="profile-key">Role</span>
+                <span class="profile-val">Software Developer</span>
+              </li>
+              <li>
+                <span class="profile-key">Study</span>
+                <span class="profile-val">Computer Science</span>
+              </li>
+              <li>
+                <span class="profile-key">Focus</span>
+                <span class="profile-val">AI / Cloud / Backend</span>
+              </li>
+              <li>
+                <span class="profile-key">Language</span>
+                <span class="profile-val">EN · SW</span>
+              </li>
+              <li>
+                <span class="profile-key">Status</span>
+                <span class="profile-val status-open">Open to work</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label reveal">02 / Skills</div>
+      <h2 class="section-heading reveal">Technical <span class="accent">Arsenal</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <i class="ph ph-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--lang">Python</span>
+            <span class="skill-tag skill-tag--lang">PHP</span>
+            <span class="skill-tag skill-tag--lang">JavaScript</span>
+            <span class="skill-tag skill-tag--lang">SQL</span>
+            <span class="skill-tag skill-tag--lang">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <i class="ph ph-stack"></i>
+            <h3>Frameworks & Tech</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--tech">Laravel</span>
+            <span class="skill-tag skill-tag--tech">Flask</span>
+            <span class="skill-tag skill-tag--tech">Cloud Computing</span>
+            <span class="skill-tag skill-tag--tech">Machine Learning</span>
+            <span class="skill-tag skill-tag--tech">scikit-learn</span>
+            <span class="skill-tag skill-tag--tech">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <i class="ph ph-wrench"></i>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--tool">Git & GitHub</span>
+            <span class="skill-tag skill-tag--tool">Linux</span>
+            <span class="skill-tag skill-tag--tool">VS Code</span>
+            <span class="skill-tag skill-tag--tool">Docker</span>
+            <span class="skill-tag skill-tag--tool">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="skill-group-header">
+            <i class="ph ph-brain"></i>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-tag--ai">NLP</span>
+            <span class="skill-tag skill-tag--ai">Speech Recognition</span>
+            <span class="skill-tag skill-tag--ai">Predictive Modeling</span>
+            <span class="skill-tag skill-tag--ai">Data Analysis</span>
+            <span class="skill-tag skill-tag--ai">Model Training</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">03 / Projects</div>
+      <h2 class="section-heading reveal">Selected <span class="accent">Work</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-icon-wrap">
+              <i class="ph ph-airplane-takeoff"></i>
+            </div>
+            <h3 class="project-title">Flight Price Predictor</h3>
+            <p class="project-desc">
+              A machine learning model that predicts airline ticket prices based on route, airline, duration, and booking timing. Achieves high accuracy using ensemble methods trained on real flight data.
+            </p>
+            <div class="project-stack">
+              <span>Python</span>
+              <span>scikit-learn</span>
+              <span>Pandas</span>
+              <span>Flask</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link" aria-label="GitHub link placeholder">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
+              <i class="ph ph-arrow-square-out"></i> Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-icon-wrap">
+              <i class="ph ph-microphone"></i>
+            </div>
+            <h3 class="project-title">Windows Voice Assistant</h3>
+            <p class="project-desc">
+              A desktop voice assistant for Windows with bilingual support for English and Kiswahili. Uses speech recognition and NLP to execute system commands, answer queries, and automate tasks.
+            </p>
+            <div class="project-stack">
+              <span>Python</span>
+              <span>SpeechRecognition</span>
+              <span>NLP</span>
+              <span>pyttsx3</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link" aria-label="GitHub link placeholder">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
+              <i class="ph ph-arrow-square-out"></i> Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-icon-wrap">
+              <i class="ph ph-cloud"></i>
+            </div>
+            <h3 class="project-title">Cloud Computing Application</h3>
+            <p class="project-desc">
+              A scalable cloud-native application demonstrating deployment, load balancing, and auto-scaling on cloud infrastructure. Built with containerization principles and infrastructure-as-code.
+            </p>
+            <div class="project-stack">
+              <span>Python</span>
+              <span>Docker</span>
+              <span>Cloud APIs</span>
+              <span>Linux</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link" aria-label="GitHub link placeholder">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
+              <i class="ph ph-arrow-square-out"></i> Demo
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-label reveal">04 / Education</div>
+      <h2 class="section-heading reveal">Background &amp; <span class="accent">Study</span></h2>
+
+      <div class="edu-timeline">
+
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-meta">
+              <span class="edu-year">Current</span>
+              <span class="edu-badge">Undergraduate</span>
+            </div>
+            <h3>Bachelor of Science — Computer Science</h3>
+            <p class="edu-institution">University (Kenya)</p>
+            <p class="edu-desc">
+              Pursuing a degree in Computer Science with a strong focus on software engineering, artificial intelligence, and distributed systems.
+            </p>
+            <div class="edu-courses">
+              <span>Data Structures & Algorithms</span>
+              <span>Machine Learning</span>
+              <span>Cloud Computing</span>
+              <span>Database Systems</span>
+              <span>Software Engineering</span>
+              <span>Operating Systems</span>
+              <span>Computer Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-meta">
+              <span class="edu-year">Self-Directed</span>
+              <span class="edu-badge">Continuous Learning</span>
+            </div>
+            <h3>Online Certifications & Courses</h3>
+            <p class="edu-institution">Various Platforms</p>
+            <p class="edu-desc">
+              Actively engaged in continuous learning through online platforms covering AI/ML, cloud architecture, and modern development practices.
+            </p>
+            <div class="edu-courses">
+              <span>AI / Machine Learning</span>
+              <span>Laravel Development</span>
+              <span>RESTful API Design</span>
+              <span>Linux Administration</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">05 / Contact</div>
+      <h2 class="section-heading reveal">Let's <span class="accent">Connect</span></h2>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            I'm open to internships, collaborative projects, and full-time opportunities. Drop a message and let's build something great together.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:kelvin@example.com" class="contact-link">
+              <div class="contact-link-icon"><i class="ph ph-envelope-simple"></i></div>
+              <div>
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">kelvin@example.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon"><i class="ph ph-github-logo"></i></div>
+              <div>
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val">github.com/kelvinwatiki</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon"><i class="ph ph-linkedin-logo"></i></div>
+              <div>
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val">linkedin.com/in/kelvinwatiki</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form (frontend only) -->
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="ph ph-paper-plane-tilt"></i> Send Message
+            </button>
+            <p class="form-note">* This form is for demonstration only.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">KW<span class="dot">.</span></div>
+      <p class="footer-copy">&copy; 2025 Kelvin Watiki. Built with ♥ and vanilla JS.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="mailto:kelvin@example.com" aria-label="Email">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
