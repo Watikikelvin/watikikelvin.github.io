@@ -3,473 +3,792 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kelvin Watiki — Software Developer & AI Enthusiast. Portfolio showcasing projects in AI/ML, Cloud Computing, and Full-Stack Development." />
-  <title>Kelvin Watiki · Software Developer</title>
+  <meta name="description" content="Kelvin Watiki — Full-Stack Developer & AI Engineer specializing in Laravel, Python, React, Vue.js, and healthcare systems. Based in Nairobi, Kenya." />
+  <meta name="author" content="Kelvin Watiki" />
+  <meta name="keywords" content="Full-Stack Developer, AI Engineer, Laravel, Python, React, Vue.js, Healthcare Systems, Nairobi, Kenya" />
+  <meta name="theme-color" content="#2E2E2E" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Kelvin Watiki — Full-Stack Developer & AI Engineer" />
+  <meta property="og:description" content="Building software that matters — from hospital management systems to AI-powered solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kelvinwatiki.dev" />
+  
+  <title>Kelvin Watiki — Full-Stack Developer & AI Engineer</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <!-- ===== IMPORTANT: Link to external CSS file ===== -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">KW<span class="dot">.</span></a>
+  <!-- ░░░░░░░░░░░░░░ LOADER ░░░░░░░░░░░░░░ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">KW</span>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Loading experience...</p>
+    </div>
+  </div>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+  <!-- ░░░░░░░░░░░░░░ CUSTOM CURSOR ░░░░░░░░░░░░░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <!-- ░░░░░░░░░░░░░░ NAVIGATION ░░░░░░░░░░░░░░ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-first">Kelvin</span>
+        <span class="logo-last">Watiki</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about"    class="nav-item">About</a>
+        <a href="#skills"   class="nav-item">Skills</a>
+        <a href="#work"     class="nav-item">Work</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#contact"  class="nav-item">Contact</a>
+      </nav>
+
+      <a href="#contact" class="header-cta">
+        <i class="fas fa-paper-plane"></i> Hire me
+      </a>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
-
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        Available for opportunities
-      </div>
-
-      <h1 class="hero-name reveal">
-        Kelvin<br />
-        <span class="name-accent">Watiki</span>
-      </h1>
-
-      <p class="hero-title reveal">
-        <span class="typed-wrapper">
-          Software Developer<span class="typed-sep"> · </span>AI Enthusiast
-        </span>
-      </p>
-
-      <p class="hero-tagline reveal">
-        Building intelligent systems at the intersection of<br class="br-desktop" />
-        code, data, and cloud infrastructure.
-      </p>
-
-      <div class="hero-cta reveal">
-        <a href="#projects" class="btn btn-primary">
-          <i class="ph ph-folder-open"></i> View Projects
-        </a>
-        <a href="#contact" class="btn btn-ghost">
-          <i class="ph ph-paper-plane-tilt"></i> Contact Me
-        </a>
-      </div>
-
-      <div class="hero-scroll-hint reveal">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <a href="#about"    class="mm-link" data-text="About">About</a>
+      <a href="#skills"   class="mm-link" data-text="Skills">Skills</a>
+      <a href="#work"     class="mm-link" data-text="Work">Work</a>
+      <a href="#education" class="mm-link" data-text="Education">Education</a>
+      <a href="#contact"  class="mm-link" data-text="Contact">Contact</a>
     </div>
+  </div>
 
-    <!-- Floating code snippets decoration -->
-    <div class="hero-deco" aria-hidden="true">
-      <div class="deco-card deco-card-1">
-        <span class="deco-comment"># flight price prediction</span><br />
-        <span class="deco-kw">model</span> = RandomForest()<br />
-        <span class="deco-kw">accuracy</span> = <span class="deco-num">94.2</span>%
-      </div>
-      <div class="deco-card deco-card-2">
-        <span class="deco-kw">def</span> recognize_swahili(<br />
-        &nbsp;&nbsp;audio_input<br />
-        ):<br />
-        &nbsp;&nbsp;<span class="deco-kw">return</span> ai_model(audio)
-      </div>
-    </div>
-  </section>
+  <main>
 
-  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-label reveal">01 / About</div>
+    <!-- ░░░░░░░░░░░░░░ HERO SECTION ░░░░░░░░░░░░░░ -->
+    <section class="hero" id="home">
+      <div class="hero-layout">
 
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <h2 class="section-heading">Turning ideas into<br /><span class="accent">intelligent systems.</span></h2>
-          <p>
-            I'm a Computer Science student with a deep passion for building software that solves real-world problems. My work spans full-stack web development, machine learning, and cloud-native applications.
-          </p>
-          <p>
-            With a foundation in Python and PHP, I craft everything from predictive AI models to voice assistants that understand Kiswahili — reflecting my belief that technology should be inclusive and locally relevant.
-          </p>
-          <p>
-            I thrive in fast-moving environments and enjoy the challenge of turning complex problems into clean, maintainable solutions.
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-headline">
+            <span class="hl-row hl-row--1">Building</span>
+            <span class="hl-row hl-row--2"><em>software</em> that</span>
+            <span class="hl-row hl-row--3">matters.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Full-stack developer and AI engineer crafting production-grade solutions 
+            for healthcare, enterprise, and intelligent systems. Based in Nairobi, Kenya.
           </p>
 
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <span class="highlight-num">3+</span>
-              <span class="highlight-label">Projects Shipped</span>
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary">
+              <i class="fas fa-arrow-down"></i> View my work
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fas fa-comment"></i> Let's connect
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">Projects Shipped</span>
             </div>
-            <div class="highlight-item">
-              <span class="highlight-num">3</span>
-              <span class="highlight-label">Languages</span>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Technologies</span>
             </div>
-            <div class="highlight-item">
-              <span class="highlight-num">AI/ML</span>
-              <span class="highlight-label">Focus Area</span>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Live Platforms</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Client Satisfaction</span>
             </div>
           </div>
         </div>
 
-        <div class="about-aside reveal">
-          <div class="about-card">
-            <div class="about-card-header">
-              <i class="ph ph-terminal"></i>
-              <span>Quick Profile</span>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hc-header">
+              <i class="fas fa-terminal"></i>
+              <span>Currently building</span>
             </div>
-            <ul class="profile-list">
-              <li>
-                <span class="profile-key">Role</span>
-                <span class="profile-val">Software Developer</span>
+            <div class="hc-stack">
+              <span><i class="fab fa-laravel"></i> Laravel</span>
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fab fa-python"></i> Python</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
+              <span><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span><i class="fas fa-cloud"></i> AWS</span>
+            </div>
+            <div class="hc-availability">
+              <span class="avail-dot"></span>
+              <span>Open for freelance & full-time roles</span>
+            </div>
+            <div class="hc-contact-buttons">
+              <a href="tel:+254790296964" class="hc-call">
+                <i class="fas fa-phone"></i> Call me
+              </a>
+              <a href="https://wa.me/254790296964" class="hc-wa" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-quote">
+            <i class="fas fa-quote-left"></i>
+            <p>"Clean code, real users, measurable impact — that's my philosophy."</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll-cue">
+        <span>Scroll</span>
+        <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      </div>
+    </section>
+
+    <!-- ░░░░░░░░░░░░░░ MARQUEE TECH STACK ░░░░░░░░░░░░░░ -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span><i class="fab fa-laravel"></i> Laravel</span><span>✦</span>
+        <span><i class="fab fa-react"></i> React</span><span>✦</span>
+        <span><i class="fab fa-vuejs"></i> Vue.js</span><span>✦</span>
+        <span><i class="fab fa-python"></i> Python</span><span>✦</span>
+        <span><i class="fab fa-php"></i> PHP</span><span>✦</span>
+        <span><i class="fas fa-database"></i> PostgreSQL</span><span>✦</span>
+        <span><i class="fas fa-database"></i> MySQL</span><span>✦</span>
+        <span><i class="fas fa-brain"></i> AI/ML</span><span>✦</span>
+        <span><i class="fab fa-docker"></i> Docker</span><span>✦</span>
+        <span><i class="fas fa-cloud"></i> Cloud</span><span>✦</span>
+        <span><i class="fab fa-linux"></i> Linux</span><span>✦</span>
+        <span><i class="fas fa-code"></i> REST APIs</span><span>✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span><i class="fab fa-laravel"></i> Laravel</span><span>✦</span>
+        <span><i class="fab fa-react"></i> React</span><span>✦</span>
+        <span><i class="fab fa-vuejs"></i> Vue.js</span><span>✦</span>
+        <span><i class="fab fa-python"></i> Python</span><span>✦</span>
+        <span><i class="fab fa-php"></i> PHP</span><span>✦</span>
+        <span><i class="fas fa-database"></i> PostgreSQL</span><span>✦</span>
+        <span><i class="fas fa-database"></i> MySQL</span><span>✦</span>
+        <span><i class="fas fa-brain"></i> AI/ML</span><span>✦</span>
+        <span><i class="fab fa-docker"></i> Docker</span><span>✦</span>
+        <span><i class="fas fa-cloud"></i> Cloud</span><span>✦</span>
+        <span><i class="fab fa-linux"></i> Linux</span><span>✦</span>
+        <span><i class="fas fa-code"></i> REST APIs</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ░░░░░░░░░░░░░░ ABOUT SECTION ░░░░░░░░░░░░░░ -->
+    <section class="about" id="about">
+      <div class="about-inner">
+
+        <div class="about-label reveal">
+          <span class="section-num">01</span>
+          <span class="section-title">About Me</span>
+          <div class="label-line"></div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text reveal">
+            <h2 class="about-headline">
+              I build systems that <em>work</em> —<br />
+              in hospitals, in the cloud,<br />
+              and for real people.
+            </h2>
+            <p>
+              I'm a Computer Science student and full-stack developer based in Nairobi, Kenya. 
+              My work spans production-grade web platforms for healthcare, AI-powered desktop tools, 
+              and cloud infrastructure — all built with the same philosophy: clean code, real users, 
+              and measurable impact.
+            </p>
+            <p>
+              I have a particular love for the intersection of backend engineering and intelligent systems. 
+              When I'm not pushing commits, I'm thinking about how software can solve problems that matter 
+              in the African context — from local language AI (English & Kiswahili) to accessible health tech.
+            </p>
+            <div class="about-signature">
+              <span>Kelvin Watiki</span>
+              <div class="signature-line"></div>
+            </div>
+          </div>
+
+          <div class="about-aside reveal">
+            <div class="aside-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="aside-label">Education</span>
+                <span class="aside-val">BSc Computer Science</span>
+              </div>
+            </div>
+            <div class="aside-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="aside-label">Location</span>
+                <span class="aside-val">Nairobi, Kenya</span>
+              </div>
+            </div>
+            <div class="aside-item">
+              <i class="fas fa-crown"></i>
+              <div>
+                <span class="aside-label">Specialty</span>
+                <span class="aside-val">Full-Stack + AI/ML</span>
+              </div>
+            </div>
+            <div class="aside-item">
+              <i class="fas fa-language"></i>
+              <div>
+                <span class="aside-label">Languages</span>
+                <span class="aside-val">English · Kiswahili</span>
+              </div>
+            </div>
+            <div class="aside-item">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <span class="aside-label">Availability</span>
+                <span class="aside-val aside-val--open">Open for work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ░░░░░░░░░░░░░░ SKILLS SECTION ░░░░░░░░░░░░░░ -->
+    <section class="skills" id="skills">
+      <div class="skills-inner">
+
+        <div class="skills-header">
+          <div class="about-label reveal">
+            <span class="section-num">02</span>
+            <span class="section-title">Expertise</span>
+            <div class="label-line"></div>
+          </div>
+          <h2 class="skills-headline reveal">A craftsman's <em>toolkit.</em></h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-col reveal">
+            <h3 class="skill-col-title">
+              <i class="fas fa-server"></i> Backend Engineering
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="sk-name">Laravel / PHP</span>
+                <span class="sk-bar"><span style="--w:95%"></span></span>
+                <span class="sk-percent">95%</span>
               </li>
-              <li>
-                <span class="profile-key">Study</span>
-                <span class="profile-val">Computer Science</span>
+              <li class="skill-item">
+                <span class="sk-name">Python / Flask / Django</span>
+                <span class="sk-bar"><span style="--w:88%"></span></span>
+                <span class="sk-percent">88%</span>
               </li>
-              <li>
-                <span class="profile-key">Focus</span>
-                <span class="profile-val">AI / Cloud / Backend</span>
+              <li class="skill-item">
+                <span class="sk-name">RESTful API Design</span>
+                <span class="sk-bar"><span style="--w:92%"></span></span>
+                <span class="sk-percent">92%</span>
               </li>
-              <li>
-                <span class="profile-key">Language</span>
-                <span class="profile-val">EN · SW</span>
-              </li>
-              <li>
-                <span class="profile-key">Status</span>
-                <span class="profile-val status-open">Open to work</span>
+              <li class="skill-item">
+                <span class="sk-name">MySQL / PostgreSQL</span>
+                <span class="sk-bar"><span style="--w:90%"></span></span>
+                <span class="sk-percent">90%</span>
               </li>
             </ul>
           </div>
+
+          <div class="skill-col reveal">
+            <h3 class="skill-col-title">
+              <i class="fas fa-code"></i> Frontend Development
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="sk-name">React.js / Next.js</span>
+                <span class="sk-bar"><span style="--w:85%"></span></span>
+                <span class="sk-percent">85%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">Vue.js / Nuxt.js</span>
+                <span class="sk-bar"><span style="--w:82%"></span></span>
+                <span class="sk-percent">82%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">HTML5 / CSS3 / JavaScript</span>
+                <span class="sk-bar"><span style="--w:96%"></span></span>
+                <span class="sk-percent">96%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">Tailwind CSS / Bootstrap</span>
+                <span class="sk-bar"><span style="--w:88%"></span></span>
+                <span class="sk-percent">88%</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-col reveal">
+            <h3 class="skill-col-title">
+              <i class="fas fa-microchip"></i> AI & Cloud
+            </h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="sk-name">Machine Learning (scikit-learn)</span>
+                <span class="sk-bar"><span style="--w:80%"></span></span>
+                <span class="sk-percent">80%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">NLP / Speech Recognition</span>
+                <span class="sk-bar"><span style="--w:78%"></span></span>
+                <span class="sk-percent">78%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">Cloud Deployment (AWS, DigitalOcean)</span>
+                <span class="sk-bar"><span style="--w:75%"></span></span>
+                <span class="sk-percent">75%</span>
+              </li>
+              <li class="skill-item">
+                <span class="sk-name">Docker / Containerization</span>
+                <span class="sk-bar"><span style="--w:82%"></span></span>
+                <span class="sk-percent">82%</span>
+              </li>
+            </ul>
+          </div>
+
         </div>
+
+        <!-- Tech Stack Cloud -->
+        <div class="tag-cloud reveal">
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fas fa-code-branch"></i> GitHub Actions</span>
+          <span><i class="fab fa-laravel"></i> Livewire</span>
+          <span>Eloquent ORM</span>
+          <span>Blade</span>
+          <span><i class="fab fa-node"></i> Node.js</span>
+          <span><i class="fas fa-chart-line"></i> Pandas</span>
+          <span><i class="fas fa-chart-bar"></i> NumPy</span>
+          <span><i class="fas fa-brain"></i> scikit-learn</span>
+          <span><i class="fas fa-flask"></i> Postman</span>
+          <span><i class="fab fa-figma"></i> Figma</span>
+          <span><i class="fab fa-linux"></i> Linux CLI</span>
+          <span><i class="fas fa-bolt"></i> WebSockets</span>
+          <span><i class="fas fa-microphone"></i> pyttsx3</span>
+          <span><i class="fas fa-x-ray"></i> DICOM</span>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <div class="section-label reveal">02 / Skills</div>
-      <h2 class="section-heading reveal">Technical <span class="accent">Arsenal</span></h2>
+    <!-- ░░░░░░░░░░░░░░ WORK SECTION ░░░░░░░░░░░░░░ -->
+    <section class="work" id="work">
+      <div class="work-inner">
 
-      <div class="skills-grid">
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="ph ph-code"></i>
-            <h3>Languages</h3>
+        <div class="work-header">
+          <div class="about-label reveal">
+            <span class="section-num">03</span>
+            <span class="section-title">Portfolio</span>
+            <div class="label-line"></div>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--lang">Python</span>
-            <span class="skill-tag skill-tag--lang">PHP</span>
-            <span class="skill-tag skill-tag--lang">JavaScript</span>
-            <span class="skill-tag skill-tag--lang">SQL</span>
-            <span class="skill-tag skill-tag--lang">Bash</span>
-          </div>
+          <h2 class="work-headline reveal">Projects I'm <em>proud</em> of.</h2>
         </div>
 
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="ph ph-stack"></i>
-            <h3>Frameworks & Tech</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--tech">Laravel</span>
-            <span class="skill-tag skill-tag--tech">Flask</span>
-            <span class="skill-tag skill-tag--tech">Cloud Computing</span>
-            <span class="skill-tag skill-tag--tech">Machine Learning</span>
-            <span class="skill-tag skill-tag--tech">scikit-learn</span>
-            <span class="skill-tag skill-tag--tech">REST APIs</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="ph ph-wrench"></i>
-            <h3>Tools & Platforms</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--tool">Git & GitHub</span>
-            <span class="skill-tag skill-tag--tool">Linux</span>
-            <span class="skill-tag skill-tag--tool">VS Code</span>
-            <span class="skill-tag skill-tag--tool">Docker</span>
-            <span class="skill-tag skill-tag--tool">Postman</span>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-header">
-            <i class="ph ph-brain"></i>
-            <h3>AI / ML</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag skill-tag--ai">NLP</span>
-            <span class="skill-tag skill-tag--ai">Speech Recognition</span>
-            <span class="skill-tag skill-tag--ai">Predictive Modeling</span>
-            <span class="skill-tag skill-tag--ai">Data Analysis</span>
-            <span class="skill-tag skill-tag--ai">Model Training</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-label reveal">03 / Projects</div>
-      <h2 class="section-heading reveal">Selected <span class="accent">Work</span></h2>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <article class="project-card reveal">
-          <div class="project-number">01</div>
-          <div class="project-body">
-            <div class="project-icon-wrap">
-              <i class="ph ph-airplane-takeoff"></i>
+        <!-- Featured Project -->
+        <article class="project project--featured reveal" data-index="01">
+          <div class="proj-content">
+            <div class="proj-meta">
+              <span class="proj-num">Featured</span>
+              <span class="proj-type">Healthcare · Web Platform</span>
             </div>
-            <h3 class="project-title">Flight Price Predictor</h3>
-            <p class="project-desc">
-              A machine learning model that predicts airline ticket prices based on route, airline, duration, and booking timing. Achieves high accuracy using ensemble methods trained on real flight data.
+            <h3 class="proj-title">Charity Medical Hospital</h3>
+            <p class="proj-desc">
+              A full production hospital website serving real patients in Kenya. Features appointment booking, 
+              service listings, doctor profiles, patient education resources, and a responsive design built 
+              for accessibility in healthcare contexts. Serves hundreds of patients monthly.
             </p>
-            <div class="project-stack">
-              <span>Python</span>
-              <span>scikit-learn</span>
-              <span>Pandas</span>
-              <span>Flask</span>
+            <div class="proj-stack">
+              <span><i class="fab fa-php"></i> PHP</span>
+              <span><i class="fab fa-laravel"></i> Laravel</span>
+              <span><i class="fas fa-database"></i> MySQL</span>
+              <span><i class="fab fa-html5"></i> HTML/CSS/JS</span>
+              <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://charitymedicalhospital.com" target="_blank" rel="noopener" class="proj-link proj-link--live">
+                <i class="fas fa-external-link-alt"></i> Live Site
+              </a>
+              <a href="https://github.com/watikikelvin/charity-medical-hospital" target="_blank" class="proj-link">
+                <i class="fab fa-github"></i> Source Code
+              </a>
             </div>
           </div>
-          <div class="project-footer">
-            <a href="#" class="project-link" aria-label="GitHub link placeholder">
-              <i class="ph ph-github-logo"></i> GitHub
-            </a>
-            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
-              <i class="ph ph-arrow-square-out"></i> Demo
-            </a>
+          <div class="proj-visual">
+            <div class="proj-browser">
+              <div class="browser-bar">
+                <span class="bb-dots"><i></i><i></i><i></i></span>
+                <span class="bb-url">charitymedicalhospital.com</span>
+                <i class="fas fa-lock"></i>
+              </div>
+              <div class="browser-screen">
+                <div class="bs-preview">
+                  <div class="preview-logo">CMH</div>
+                  <div class="preview-nav"></div>
+                  <div class="preview-hero"></div>
+                  <div class="preview-cards">
+                    <div class="card"></div><div class="card"></div><div class="card"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card reveal">
-          <div class="project-number">02</div>
-          <div class="project-body">
-            <div class="project-icon-wrap">
-              <i class="ph ph-microphone"></i>
+        <!-- Projects Grid -->
+        <div class="proj-grid">
+
+          <article class="proj-card reveal" data-index="02">
+            <div class="pc-icon"><i class="fas fa-x-ray"></i></div>
+            <div class="pc-top">
+              <span class="pc-num">02</span>
+              <span class="pc-type">Healthcare · AI</span>
             </div>
-            <h3 class="project-title">Windows Voice Assistant</h3>
-            <p class="project-desc">
-              A desktop voice assistant for Windows with bilingual support for English and Kiswahili. Uses speech recognition and NLP to execute system commands, answer queries, and automate tasks.
+            <h3 class="pc-title">Radiology Portal</h3>
+            <p class="pc-desc">
+              Secure web portal for uploading, storing, and viewing medical radiology images (DICOM). 
+              Supports radiologists and clinicians with image annotation and patient record linking.
             </p>
-            <div class="project-stack">
-              <span>Python</span>
-              <span>SpeechRecognition</span>
+            <div class="pc-stack">
+              <span><i class="fab fa-laravel"></i> Laravel</span>
+              <span><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span>DICOM</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
+            </div>
+            <a href="https://github.com/watikikelvin/radiology-portal" target="_blank" class="pc-link">
+              View project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="proj-card reveal" data-index="03">
+            <div class="pc-icon"><i class="fas fa-hospital-user"></i></div>
+            <div class="pc-top">
+              <span class="pc-num">03</span>
+              <span class="pc-type">Enterprise · Backend</span>
+            </div>
+            <h3 class="pc-title">Hospital Management System</h3>
+            <p class="pc-desc">
+              Full-featured HMS covering patient registration, ward management, billing, pharmacy inventory, 
+              and staff scheduling — all in a single cohesive platform used by local clinics.
+            </p>
+            <div class="pc-stack">
+              <span><i class="fab fa-laravel"></i> Laravel</span>
+              <span><i class="fas fa-database"></i> MySQL</span>
+              <span>Livewire</span>
+              <span>Blade</span>
+            </div>
+            <a href="https://github.com/watikikelvin/hospital-management-system" target="_blank" class="pc-link">
+              View project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="proj-card reveal" data-index="04">
+            <div class="pc-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="pc-top">
+              <span class="pc-num">04</span>
+              <span class="pc-type">AI · Desktop</span>
+            </div>
+            <h3 class="pc-title">Windows Voice Assistant</h3>
+            <p class="pc-desc">
+              Python-based desktop assistant with bilingual support — English and Kiswahili. 
+              Executes OS commands, answers queries, and automates daily tasks through natural language.
+            </p>
+            <div class="pc-stack">
+              <span><i class="fab fa-python"></i> Python</span>
               <span>NLP</span>
               <span>pyttsx3</span>
+              <span>SpeechRecognition</span>
             </div>
-          </div>
-          <div class="project-footer">
-            <a href="#" class="project-link" aria-label="GitHub link placeholder">
-              <i class="ph ph-github-logo"></i> GitHub
+            <a href="https://github.com/watikikelvin/voice-assistant" target="_blank" class="pc-link">
+              View project <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
-              <i class="ph ph-arrow-square-out"></i> Demo
-            </a>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="project-card reveal">
-          <div class="project-number">03</div>
-          <div class="project-body">
-            <div class="project-icon-wrap">
-              <i class="ph ph-cloud"></i>
+          <article class="proj-card reveal" data-index="05">
+            <div class="pc-icon"><i class="fas fa-plane"></i></div>
+            <div class="pc-top">
+              <span class="pc-num">05</span>
+              <span class="pc-type">AI · ML</span>
             </div>
-            <h3 class="project-title">Cloud Computing Application</h3>
-            <p class="project-desc">
-              A scalable cloud-native application demonstrating deployment, load balancing, and auto-scaling on cloud infrastructure. Built with containerization principles and infrastructure-as-code.
+            <h3 class="pc-title">Flight Price Predictor</h3>
+            <p class="pc-desc">
+              Machine learning model predicting airline ticket prices from route, duration, airline, 
+              and booking window data. Trained on real datasets with ensemble methods for high accuracy.
             </p>
-            <div class="project-stack">
-              <span>Python</span>
-              <span>Docker</span>
+            <div class="pc-stack">
+              <span><i class="fab fa-python"></i> Python</span>
+              <span>scikit-learn</span>
+              <span>Pandas</span>
+              <span><i class="fas fa-flask"></i> Flask</span>
+            </div>
+            <a href="https://github.com/watikikelvin/flight-price-predictor" target="_blank" class="pc-link">
+              View project <i class="fas fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="proj-card reveal" data-index="06">
+            <div class="pc-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <div class="pc-top">
+              <span class="pc-num">06</span>
+              <span class="pc-type">Cloud · Storage</span>
+            </div>
+            <h3 class="pc-title">Claude Storage System</h3>
+            <p class="pc-desc">
+              Cloud-native file storage and retrieval system integrating AI context management, 
+              designed for persisting and querying structured data across sessions and deployments.
+            </p>
+            <div class="pc-stack">
+              <span><i class="fab fa-python"></i> Python</span>
               <span>Cloud APIs</span>
-              <span>Linux</span>
+              <span><i class="fab fa-docker"></i> Docker</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
             </div>
-          </div>
-          <div class="project-footer">
-            <a href="#" class="project-link" aria-label="GitHub link placeholder">
-              <i class="ph ph-github-logo"></i> GitHub
+            <a href="https://github.com/watikikelvin/claude-storage" target="_blank" class="pc-link">
+              View project <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="#" class="project-link project-link--secondary" aria-label="Live demo placeholder">
-              <i class="ph ph-arrow-square-out"></i> Demo
-            </a>
-          </div>
-        </article>
+          </article>
+
+        </div>
+
+        <div class="work-cta reveal">
+          <a href="https://github.com/watikikelvin" target="_blank" class="btn-outline">
+            <i class="fab fa-github"></i> See more on GitHub
+          </a>
+        </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
-  <section class="section section-alt" id="education">
-    <div class="container">
-      <div class="section-label reveal">04 / Education</div>
-      <h2 class="section-heading reveal">Background &amp; <span class="accent">Study</span></h2>
+    <!-- ░░░░░░░░░░░░░░ EDUCATION SECTION ░░░░░░░░░░░░░░ -->
+    <section class="edu" id="education">
+      <div class="edu-inner">
+        <div class="about-label reveal">
+          <span class="section-num">04</span>
+          <span class="section-title">Education & Growth</span>
+          <div class="label-line"></div>
+        </div>
 
-      <div class="edu-timeline">
-
-        <div class="edu-item reveal">
-          <div class="edu-dot"></div>
-          <div class="edu-card">
-            <div class="edu-meta">
-              <span class="edu-year">Current</span>
-              <span class="edu-badge">Undergraduate</span>
+        <div class="edu-grid">
+          <div class="edu-entry reveal">
+            <div class="edu-year">
+              <span>2022 - Present</span>
+              <div class="year-dot"></div>
             </div>
-            <h3>Bachelor of Science — Computer Science</h3>
-            <p class="edu-institution">University (Kenya)</p>
-            <p class="edu-desc">
-              Pursuing a degree in Computer Science with a strong focus on software engineering, artificial intelligence, and distributed systems.
-            </p>
-            <div class="edu-courses">
-              <span>Data Structures & Algorithms</span>
-              <span>Machine Learning</span>
-              <span>Cloud Computing</span>
-              <span>Database Systems</span>
-              <span>Software Engineering</span>
-              <span>Operating Systems</span>
-              <span>Computer Networks</span>
+            <div class="edu-body">
+              <h3>BSc Computer Science</h3>
+              <p class="edu-place">University — Nairobi, Kenya</p>
+              <p class="edu-note">
+                Focus areas: Software Engineering, Artificial Intelligence, Distributed Systems, 
+                Database Architecture, and Cloud Computing. Active in open-source development alongside coursework.
+                <strong>Current GPA: 3.8/4.0</strong>
+              </p>
+              <div class="edu-courses">
+                <span>Algorithms & DS</span>
+                <span>Machine Learning</span>
+                <span>Cloud Computing</span>
+                <span>Software Engineering</span>
+                <span>Operating Systems</span>
+                <span>Database Systems</span>
+                <span>Computer Networks</span>
+                <span>Cybersecurity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-entry reveal">
+            <div class="edu-year">
+              <span>Continuous</span>
+              <div class="year-dot"></div>
+            </div>
+            <div class="edu-body">
+              <h3>Self-Directed Learning</h3>
+              <p class="edu-place">Udemy · Coursera · YouTube · Official Docs</p>
+              <p class="edu-note">
+                I believe real skills come from building. I invest in certifications and courses in advanced 
+                Laravel, React architecture, ML pipelines, and cloud infrastructure alongside my degree.
+              </p>
+              <div class="edu-courses">
+                <span>Advanced Laravel</span>
+                <span>React & Next.js</span>
+                <span>ML with Python</span>
+                <span>Docker & DevOps</span>
+                <span>System Design</span>
+                <span>GraphQL</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="edu-item reveal">
-          <div class="edu-dot"></div>
-          <div class="edu-card">
-            <div class="edu-meta">
-              <span class="edu-year">Self-Directed</span>
-              <span class="edu-badge">Continuous Learning</span>
+        <!-- Certifications -->
+        <div class="certs reveal">
+          <h3><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="certs-grid">
+            <div class="cert-item">
+              <i class="fab fa-laravel"></i>
+              <span>Laravel Certified Developer</span>
             </div>
-            <h3>Online Certifications & Courses</h3>
-            <p class="edu-institution">Various Platforms</p>
-            <p class="edu-desc">
-              Actively engaged in continuous learning through online platforms covering AI/ML, cloud architecture, and modern development practices.
-            </p>
-            <div class="edu-courses">
-              <span>AI / Machine Learning</span>
-              <span>Laravel Development</span>
-              <span>RESTful API Design</span>
-              <span>Linux Administration</span>
+            <div class="cert-item">
+              <i class="fab fa-python"></i>
+              <span>Python for Data Science</span>
+            </div>
+            <div class="cert-item">
+              <i class="fab fa-react"></i>
+              <span>React & Modern JS</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-cloud"></i>
+              <span>AWS Cloud Practitioner</span>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-label reveal">05 / Contact</div>
-      <h2 class="section-heading reveal">Let's <span class="accent">Connect</span></h2>
+    <!-- ░░░░░░░░░░░░░░ CONTACT SECTION ░░░░░░░░░░░░░░ -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
 
-      <div class="contact-grid">
-
-        <div class="contact-info reveal">
-          <p class="contact-intro">
-            I'm open to internships, collaborative projects, and full-time opportunities. Drop a message and let's build something great together.
+        <div class="contact-left reveal">
+          <div class="about-label">
+            <span class="section-num">05</span>
+            <span class="section-title">Get in Touch</span>
+            <div class="label-line"></div>
+          </div>
+          <h2 class="contact-headline">
+            Have a project?<br />
+            <em>Let's talk.</em>
+          </h2>
+          <p class="contact-sub">
+            I'm open to internships, freelance contracts, and full-time roles. 
+            If you're building something meaningful in Africa or beyond, I want to hear about it.
           </p>
 
-          <div class="contact-links">
-            <a href="mailto:kelvin@example.com" class="contact-link">
-              <div class="contact-link-icon"><i class="ph ph-envelope-simple"></i></div>
+          <div class="contact-details">
+            <a href="mailto:wanduruakelvinwatiki@gmail.com" class="cd-row">
+              <i class="fas fa-envelope"></i>
               <div>
-                <span class="contact-link-label">Email</span>
-                <span class="contact-link-val">kelvin@example.com</span>
+                <span>Email me</span>
+                <small>wanduruakelvinwatiki@gmail.com</small>
               </div>
             </a>
-            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">
-              <div class="contact-link-icon"><i class="ph ph-github-logo"></i></div>
+            <a href="tel:+254790296964" class="cd-row">
+              <i class="fas fa-phone-alt"></i>
               <div>
-                <span class="contact-link-label">GitHub</span>
-                <span class="contact-link-val">github.com/kelvinwatiki</span>
+                <span>Call me</span>
+                <small>+254 790 296 964</small>
               </div>
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link">
-              <div class="contact-link-icon"><i class="ph ph-linkedin-logo"></i></div>
+            <a href="https://wa.me/254790296964" target="_blank" rel="noopener" class="cd-row">
+              <i class="fab fa-whatsapp"></i>
               <div>
-                <span class="contact-link-label">LinkedIn</span>
-                <span class="contact-link-val">linkedin.com/in/kelvinwatiki</span>
+                <span>WhatsApp</span>
+                <small>Available 9AM - 8PM EAT</small>
+              </div>
+            </a>
+            <a href="https://github.com/watikikelvin" target="_blank" rel="noopener" class="cd-row">
+              <i class="fab fa-github"></i>
+              <div>
+                <span>GitHub</span>
+                <small>/watikikelvin</small>
+              </div>
+            </a>
+            <a href="#" class="cd-row">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <span>LinkedIn</span>
+                <small>in/kelvinwatiki</small>
               </div>
             </a>
           </div>
         </div>
 
-        <!-- Contact Form (frontend only) -->
-        <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <i class="ph ph-paper-plane-tilt"></i> Send Message
-            </button>
-            <p class="form-note">* This form is for demonstration only.</p>
-          </form>
-        </div>
-
-      </div>
+        <div class="contact-right reveal">
+  <form class="contact-form" id="contact-form" action="https://formspree.io/f/meevrnjp" method="POST" novalidate>
+    <!-- Add these hidden fields for better email delivery -->
+    <input type="hidden" name="_subject" value="New message from Kelvin's Portfolio">
+    <input type="hidden" name="_replyto" value="email">
+    
+    <div class="cf-group">
+      <label for="cf-name"><i class="far fa-user"></i> Your name *</label>
+      <input type="text" id="cf-name" name="name" placeholder="Kelvin Watiki" required autocomplete="name" />
     </div>
-  </section>
+    <div class="cf-group">
+      <label for="cf-email"><i class="far fa-envelope"></i> Email address *</label>
+      <input type="email" id="cf-email" name="email" placeholder="hello@example.com" required autocomplete="email" />
+    </div>
+    <div class="cf-group">
+      <label for="cf-subject"><i class="far fa-tag"></i> Subject</label>
+      <input type="text" id="cf-subject" name="subject" placeholder="Project Inquiry, Collaboration, Job Opportunity..." />
+    </div>
+    <div class="cf-group">
+      <label for="cf-message"><i class="far fa-comment"></i> Message *</label>
+      <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+    </div>
+    <button type="submit" class="btn-primary btn-submit" id="submit-btn">
+      <i class="fas fa-paper-plane"></i> Send message
+    </button>
+    <p class="cf-note">
+      <i class="fas fa-shield-alt"></i> I'll respond within 24-48 hours
+    </p>
+  </form>
+</div>
 
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">KW<span class="dot">.</span></div>
-      <p class="footer-copy">&copy; 2025 Kelvin Watiki. Built with ♥ and vanilla JS.</p>
-      <div class="footer-socials">
-        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="ph ph-github-logo"></i>
-        </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="ph ph-linkedin-logo"></i>
-        </a>
-        <a href="mailto:kelvin@example.com" aria-label="Email">
-          <i class="ph ph-envelope-simple"></i>
-        </a>
       </div>
+    </section>
+
+  </main>
+
+  <!-- ░░░░░░░░░░░░░░ FOOTER ░░░░░░░░░░░░░░ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">KW</div>
+        <p class="footer-copy">
+          &copy; 2026 Kelvin Watiki. Built with <i class="fas fa-heart"></i> in Laikipia, Kenya.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/watikikelvin" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/254790296964" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <a href="#home" class="footer-top">
+        <i class="fas fa-arrow-up"></i> Top
+      </a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
